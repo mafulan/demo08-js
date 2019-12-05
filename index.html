@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        .swap{
+            width: 645px;
+            height: 531px;
+            background: url("img/image.jpg") no-repeat;
+            margin: 0 auto;
+            position: relative;
+            display: none; 
+
+        }
+        .swap ul{
+            width: 482px;
+            height: 319px;
+            border: 1px #cdcfd0 solid;
+            background-color: white;
+            overflow: auto;
+            position: absolute;
+            left: 0;
+            top: 88px;
+        }
+        #te1{
+            width: 482px;
+            height: 60px;
+            background-color: white;
+            position: absolute;
+            left: 0;
+            top: 433px;
+            border: none;
+            
+        }
+        #btn2{
+            width: 70px;
+            height: 26px;
+            box-sizing: border-box;
+            border: 1px #cdcfd0 solid;
+            font-size: 12px;
+            text-align: center;
+            line-height: 26px;
+            position: absolute;
+            right: 280px;
+            bottom: 11px;
+        }
+        #btn3{
+            width: 70px;
+            height: 26px;
+            box-sizing: border-box;
+            border: 1px #cdcfd0 solid;
+            background-color: #8ab23d;
+            color: white;
+            font-size: 12px;
+            text-align: center;
+            line-height: 26px;
+            position: absolute;
+            right: 178px;
+            bottom: 11px;
+
+         }
+        #btn1{
+            width: 70px;
+            height: 26px;
+            box-sizing: border-box;
+            border: 1px #cdcfd0 solid;
+            background-color: #8ab23d;
+            color: white;
+            font-size: 12px;
+            text-align: center;
+            line-height: 26px;
+            margin-top: 30px;
+            margin-left: 30px;
+            
+
+        } 
+        li{
+            display: inline-block;
+            list-style: none;
+            border: 1px green  solid;
+            margin: 3px;
+        }
+      
+
+    </style>
+
+</head>
+<body>
+    <button id="btn1">登录</button>
+    <div class="swap " id="div1">
+        <ul id="ul1"></ul>
+       <textarea id="te1" cols="30" rows="10"></textarea> 
+        <!-- <input type="text" id="te1"> -->
+        <button id="btn2">关闭</button>
+        <button id="btn3">发送</button>
+      <script>
+            var oDiv = document.getElementById("div1");
+            var oBtn1  =  document.getElementById("btn1");
+            var oBtn2  =  document.getElementById("btn2");
+            var oBtn3  =  document.getElementById("btn3");
+            var oUl = document.getElementById("ul1");
+            var oTe = document.getElementById("te1");
+            oBtn1.onclick = function (){
+                   oDiv.style.display = "block";
+            }
+            oBtn2.onclick = function (){
+                   oDiv.style.display = "none";
+            }
+             oBtn3.onclick = function(){
+                oUl.innerHTML += "<li>"+oTe.value +"</li><br/>";
+                oTe.value = "";
+                
+             }
+
+        </script> 
+    </div>
+</body>
+</html>
